@@ -1,0 +1,65 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+      create: true
+
+# Clean dead symlinks
+- clean: ["~"]
+
+# Clone tools repos
+- shell:
+    - command: git -C ~/workspace/tools/kubectx pull || git clone https://github.com/ahmetb/kubectx.git ~/workspace/tools/kubectx
+    - command: git -C ~/workspace/tools/kubetail pull || git clone https://github.com/johanhaleby/kubetail.git ~/workspace/tools/kubetail
+    - command: git -C ~/workspace/tools/multi-git-status pull || git clone https://github.com/fboender/multi-git-status.git ~/workspace/tools/multi-git-status
+
+# Symlink tools
+- link:
+    ~/bin/kubectx:
+      path: ~/workspace/tools/kubectx/kubectx
+    ~/bin/kubens:
+      path: ~/workspace/tools/kubectx/kubens
+    ~/bin/kubetail:
+      path: ~/workspace/tools/kubetail/kubetail
+    ~/bin/mgitstatus:
+      path: ~/workspace/tools/multi-git-status/mgitstatus
+
+# Symlink dotfiles
+- link:
+    ~/.tmux.conf:
+      path: dotfiles/tmux/tmux.conf
+
+    ~/.gitconfig:
+      path: dotfiles/git/gitconfig
+
+    ~/.gitignore_global:
+      path: dotfiles/git/gitignore_global
+#
+#    ~/.vscode-server/data/Machine/:
+#      path: dotfiles/vscode/*
+#      glob: true
+
+    ~/.config/fish/config.fish:
+      path: dotfiles/fish/config.fish
+
+    ~/.config/fish/functions/:
+      path: dotfiles/fish/functions/*
+      glob: true
+
+    ~/.config/fish/completions/:
+      path: dotfiles/fish/completions/*
+      glob: true
+
+    # alacritty.yml needs to be put to %APPDATA% manually. You can't symlink from wsl to windows
+    # /mnt/c/Users/gdlug/AppData/Roaming/alacritty/alacritty.yml:
+    #   path: dotfiles/alacritty/alacritty.yml
+
+    # Can't symlink to /etc without sudo, needs to be done manually
+    # /etc/wsl.conf:
+    #   path: dotfiles/wsl/wsl.conf
+
+- shell:
+    # Update submodules
+    - command: git submodule update --init --recursive
+      stdout: true
+      stderr: true

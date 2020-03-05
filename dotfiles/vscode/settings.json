@@ -1,0 +1,56 @@
+{
+  "files.associations": {
+    "Vagrantfile": "ruby",
+    "*.tfstate": "json"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#353535",
+    "statusBar.foreground": "#dddddd"
+  },
+  "editor.formatOnSave": true,
+  "editor.fontSize": 13,
+  "editor.fontFamily": "'Roboto Mono', 'Courier New', monospace",
+  "window.zoomLevel": 0,
+  "git.confirmSync": false,
+  "TodoParser": {
+    "showInProblems": true
+  },
+  "files.autoSave": "onFocusChange",
+  "editor.smoothScrolling": true,
+  "go.formatTool": "gofmt",
+  "cSpell.userWords": [
+    "gridarrow"
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "go.gocodeAutoBuild": true,
+  "go.docsTool": "gogetdoc",
+  "terminal.integrated.copyOnSelection": true,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.startupEditor": "newUntitledFile",
+  "search.location": "panel",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "terminal.integrated.shell.linux": "/usr/bin/fish",
+  "git.autofetch": true,
+  "gitlens.views.lineHistory.enabled": false,
+  "gitlens.views.search.enabled": false,
+  "gitlens.views.compare.enabled": false,
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "scm",
+  "gitlens.views.fileHistory.enabled": false,
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "vscodeWorkspaceSwitcher.showInActivityBar": false,
+  "vscodeWorkspaceSwitcher.showInExplorer": false,
+  "vscodeWorkspaceSwitcher.paths": [
+    "~/.config/Code/User/workspaces"
+  ],
+  "python.jediEnabled": false,
+  "go.useLanguageServer": true
+}

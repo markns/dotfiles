@@ -1,0 +1,6 @@
+*.swp
+*.sublime-workspace
+.vscode/
+*~
+
+.idea

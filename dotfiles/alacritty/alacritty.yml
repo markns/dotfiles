@@ -1,0 +1,19 @@
+font:
+  normal:
+    family: Roboto Mono
+    style: Regular
+  size: 10
+
+startup_mode: Maximized
+enable_experimental_conpty_backend: true
+
+shell:
+  program: wsl
+  args:
+    - -e
+    - tmux new-session -A -s main
+
+colors:
+  primary:
+    background: '0x222222'
+    foreground: '0xdedede'
