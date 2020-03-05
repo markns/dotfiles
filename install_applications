@@ -1,6 +1,6 @@
 
 
-brew install fish kubernetes-cli go minikube
+brew install fish kubernetes-cli go minikube pyenv pipenv
 brew cask install alacritty
 
 # Install fisher

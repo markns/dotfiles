@@ -19,7 +19,7 @@ alias kt "kubetail"
 alias mgs "mgitstatus ~/workspace 3"
 
 # Pyenv auto activation support
-#status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and source (pyenv init -|psub)
 #status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 # Set pipenv virtualens directory to the one managed by pyenv
@@ -29,6 +29,3 @@ set -gx WORKON_HOME ~/.pyenv/versions
 set -g pure_symbol_prompt '>'
 set -g pure_symbol_git_unpulled_commits '\\'
 set -g pure_symbol_git_unpushed_commits '/'
-
-# Reset umask as it's set incorrectly to 0000 on WSL
-umask 0022
