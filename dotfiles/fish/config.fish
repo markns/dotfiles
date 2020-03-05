@@ -8,6 +8,8 @@
 set -gx PATH ~/.pyenv/bin $PATH
 set -gx PATH ~/bin $PATH
 
+set -x GOPATH ~/workspace
+
 #Disable fish greeting
 set fish_greeting
 
@@ -29,3 +31,4 @@ set -gx WORKON_HOME ~/.pyenv/versions
 set -g pure_symbol_prompt '>'
 set -g pure_symbol_git_unpulled_commits '\\'
 set -g pure_symbol_git_unpushed_commits '/'
+

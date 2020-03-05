@@ -8,9 +8,9 @@ startup_mode: Maximized
 enable_experimental_conpty_backend: true
 
 shell:
-  program: wsl
+  program: /usr/local/bin/fish
   args:
-    - -e
+    - -c
     - tmux new-session -A -s main
 
 colors:

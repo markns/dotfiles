@@ -1,7 +1,7 @@
 
 
-brew install fish kubernetes-cli go minikube pyenv pipenv
-brew cask install alacritty
+brew install fish kubernetes-cli go minikube pyenv pipenv tmux htop
+brew cask install alacritty fluor
 
 # Install fisher
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
